@@ -9,6 +9,8 @@ require('dotenv').config();
 app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+const random  = require('./controllers/random');
+app.use('/controller', random);
 const test  = require('./controllers/test');
 app.use('/controller', test);
 
